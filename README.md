@@ -1,1 +1,1 @@
-# Weekly_Activities
+# Weekly_Class_Activities
