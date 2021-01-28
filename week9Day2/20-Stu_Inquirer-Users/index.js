@@ -18,7 +18,7 @@ inquirer
           type: 'list',
           message: 'What is your preferred method of communication?',
           name: 'contact',
-          choices: ['email','phone', 'telekinesis'],
+          choices: ['email','phone', 'ups'],
       },
   ])
   .then((response)=>{
