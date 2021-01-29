@@ -12,17 +12,14 @@ function Developer(name,tech){
     this.tech = tech;
     this.introduction = () => {
         console.log(`Hi my name is ${this.name} and I love ${this.tech}`)
-
     }
-
-
 
 }
 
 const personone = new Developer("Mark","Javascript");
-// const persontwo = new Developer("Mike","Python");
+const persontwo = new Developer("Mike","Python");
 
 
 personone.introduction();
-// persontwo.Developer();
+persontwo.introduction();
 

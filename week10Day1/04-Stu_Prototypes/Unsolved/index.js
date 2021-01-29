@@ -1,5 +1,5 @@
 // TODO: Add a comment describing what kind of function this is
-// This is a constructor function
+// This is a constructor function - takes in a series of values and creates an object
 function Character(name, type, age, strength, hitpoints) {
   this.name = name;
   this.type = type;
@@ -10,6 +10,7 @@ function Character(name, type, age, strength, hitpoints) {
 
 // TODO: Add a comment describing the purpose of `.prototype` in this method declaration
 //This is inheriting properties - as a template - of the Character object
+//prototype Associates the method printStates with the Character constructor
 Character.prototype.printStats = function () {
   console.log(
     `Name: ${this.name}\nProfession: ${this.type}\nAge: ${this.age}\nStrength: ${this.strength}\nHitPoints: ${this.hitpoints}`
@@ -19,7 +20,7 @@ Character.prototype.printStats = function () {
 
 // TODO: Add a comment describing the functionality of this method
 // If the hitpoints in the Character properties are greater than 0, the character is still alive
-// If the hitpoints in the Character properties is zerio, the character has died
+// If the hitpoints in the Character properties is zero, the character has died
 Character.prototype.isAlive = function () {
   if (this.hitpoints > 0) {
     console.log(`${this.name} is still alive!`);
