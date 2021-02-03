@@ -9,7 +9,7 @@ const callAPI = (duration) =>
       if (duration > maxDuration){
         reject(new Error('Longer than the allowed duration.'))
       }else{
-        resolve('Not longer than max duration')
+        resolve(`Response received: ${duration}ms`);
       }
     }, duration);
   });
@@ -23,8 +23,5 @@ console.log('Promises array before the timeouts have finished: ', promises);
 // TODO: Use Promise.all() to capture when the array of promises has been resolved or if any of them were rejected
 
 Promise.all(promises)
-  .then((values) => {
-    console.log(`\nResponse Recieved:`);
-    console.log(values)
-  })
+  .then((response) => console.log('Response from Promise.all():', response))
   .catch((err) => new Error(err));
